@@ -26,6 +26,7 @@
 		42C7B5521F00AFCA00FDBBA4 /* 004.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 42C7B54C1F00AFCA00FDBBA4 /* 004.jpeg */; };
 		42C7B5531F00AFCA00FDBBA4 /* 005.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 42C7B54D1F00AFCA00FDBBA4 /* 005.jpeg */; };
 		42C7B5541F00AFCA00FDBBA4 /* 006.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 42C7B54E1F00AFCA00FDBBA4 /* 006.jpeg */; };
+		42EC1CAD1FA07A40008B0325 /* JKCardLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EC1CAC1FA07A40008B0325 /* JKCardLayout.m */; };
 		42EFA1221F09F48C00DC161A /* JKMasonryLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EFA1211F09F48C00DC161A /* JKMasonryLayout.m */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,8 @@
 		42C7B54C1F00AFCA00FDBBA4 /* 004.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 004.jpeg; sourceTree = "<group>"; };
 		42C7B54D1F00AFCA00FDBBA4 /* 005.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 005.jpeg; sourceTree = "<group>"; };
 		42C7B54E1F00AFCA00FDBBA4 /* 006.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 006.jpeg; sourceTree = "<group>"; };
+		42EC1CAB1FA07A40008B0325 /* JKCardLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKCardLayout.h; sourceTree = "<group>"; };
+		42EC1CAC1FA07A40008B0325 /* JKCardLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKCardLayout.m; sourceTree = "<group>"; };
 		42EFA1201F09F48C00DC161A /* JKMasonryLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKMasonryLayout.h; sourceTree = "<group>"; };
 		42EFA1211F09F48C00DC161A /* JKMasonryLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKMasonryLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +125,7 @@
 		42C7B5051F009D0E00FDBBA4 = {
 			isa = PBXGroup;
 			children = (
+				42EC1CAA1FA0746B008B0325 /* CardLayout */,
 				42C7B5481F00AFCA00FDBBA4 /* images */,
 				42EFA11F1F09F45C00DC161A /* MasonryLayout */,
 				420409AF1F05F29600B76C6F /* CoverFlowLayout */,
@@ -210,6 +214,15 @@
 				42C7B54E1F00AFCA00FDBBA4 /* 006.jpeg */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		42EC1CAA1FA0746B008B0325 /* CardLayout */ = {
+			isa = PBXGroup;
+			children = (
+				42EC1CAB1FA07A40008B0325 /* JKCardLayout.h */,
+				42EC1CAC1FA07A40008B0325 /* JKCardLayout.m */,
+			);
+			path = CardLayout;
 			sourceTree = "<group>";
 		};
 		42EFA11F1F09F45C00DC161A /* MasonryLayout */ = {
@@ -370,6 +383,7 @@
 				420409B21F05F2F500B76C6F /* JKCoverFlowLayout.m in Sources */,
 				42C7B5471F00A09400FDBBA4 /* JKStackLayout.m in Sources */,
 				42B9EA931F025333003E220C /* JKStackCell.m in Sources */,
+				42EC1CAD1FA07A40008B0325 /* JKCardLayout.m in Sources */,
 				42EFA1221F09F48C00DC161A /* JKMasonryLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

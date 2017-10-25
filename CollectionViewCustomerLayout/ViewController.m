@@ -11,6 +11,7 @@
 #import "JKCoverFlowCell.h"
 #import "JKCoverFlowLayout.h"
 #import "JKMasonryLayout.h"
+#import "JKCardLayout.h"
 
 @interface ViewController ()<JKStackViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource,JKMasonryLayoutDelegate>
 
@@ -40,16 +41,19 @@
 //    self.data = [self loadData];
 //    JKCoverFlowLayout *layout = [[JKCoverFlowLayout alloc] init];
 //    layout.itemSize = CGSizeMake(1000, 1000);
-//    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
 //    self.cv.collectionViewLayout = layout;
 
-    self.data = [self loadData];
-    JKMasonryLayout *layout = [[JKMasonryLayout alloc] init];
-    layout.numberOfColumns = 3;
-    layout.interItemSpacing = 10;
-    layout.delegate = self;
-    self.cv.collectionViewLayout = layout;
+//    self.data = [self loadData];
+//    JKMasonryLayout *layout = [[JKMasonryLayout alloc] init];
+//    layout.numberOfColumns = 3;
+//    layout.interItemSpacing = 10;
+//    layout.delegate = self;
+//    self.cv.collectionViewLayout = layout;
     
+    
+    self.data = [self loadData];
+    JKCardLayout *layout = [[JKCardLayout alloc] init];
+    self.cv.collectionViewLayout = layout;
 }
 
 - (void)jk_stackView:(JKStackView *)stackView didSelectImageAtIndex:(NSUInteger)index {
