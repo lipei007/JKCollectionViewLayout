@@ -12,4 +12,6 @@
 @property (strong, nonatomic) IBOutlet UIImageView *iv;
 @property (strong, nonatomic) IBOutlet UILabel *lb;
 
+- (void)setNumber:(int)number;
+
 @end

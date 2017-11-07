@@ -19,6 +19,7 @@
      * 在此方法中计算边框，numberOfColumns 和 interItemSpacing 决定宽度，高度由代理决定
      *
      */
+    [super prepareLayout];
     
     maxY = 0;
     NSUInteger numberOfItem = [self.collectionView.dataSource collectionView:self.collectionView numberOfItemsInSection:0];

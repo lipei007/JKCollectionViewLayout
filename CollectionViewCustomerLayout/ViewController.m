@@ -12,6 +12,8 @@
 #import "JKCoverFlowLayout.h"
 #import "JKMasonryLayout.h"
 #import "JKCardLayout.h"
+#import "JKCarouselLayout.h"
+#import "JKWheelLayout.h"
 
 @interface ViewController ()<JKStackViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource,JKMasonryLayoutDelegate>
 
@@ -51,9 +53,22 @@
 //    self.cv.collectionViewLayout = layout;
     
     
+//    self.data = [self loadData];
+//    JKCardLayout *layout = [[JKCardLayout alloc] init];
+//    self.cv.collectionViewLayout = layout;
+    
+//    self.data = [self loadData];
+//    JKCarouselLayout *layout = [[JKCarouselLayout alloc] init];
+//    self.cv.collectionViewLayout = layout;
+    
+    
     self.data = [self loadData];
-    JKCardLayout *layout = [[JKCardLayout alloc] init];
+    JKWheelLayout *layout = [[JKWheelLayout alloc] init];
+    layout.itemSize = CGSizeMake(200, 256);
+    layout.radius = 700;
     self.cv.collectionViewLayout = layout;
+    
+    
 }
 
 - (void)jk_stackView:(JKStackView *)stackView didSelectImageAtIndex:(NSUInteger)index {
@@ -84,15 +99,17 @@
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.data.count;
-//    return 100;
+//    return self.data.count;
+    return 20;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     JKCoverFlowCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"JKCoverFlowCell" forIndexPath:indexPath];
     
-    UIImage *img = [self.data objectAtIndex:indexPath.row];
-    cell.iv.image = img;
+//    UIImage *img = [self.data objectAtIndex:indexPath.row];
+//    cell.iv.image = img;
+    cell.backgroundColor = [UIColor blueColor];
+    [cell setNumber:(int)indexPath.row];
 
 //    cell.backgroundColor = [UIColor brownColor];
 //    cell.lb.text = [NSString stringWithFormat:@"%lu",indexPath.row];

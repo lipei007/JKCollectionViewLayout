@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		420409B21F05F2F500B76C6F /* JKCoverFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 420409B11F05F2F500B76C6F /* JKCoverFlowLayout.m */; };
 		420409B51F05F69400B76C6F /* JKCoverFlowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 420409B41F05F69400B76C6F /* JKCoverFlowCell.m */; };
+		423EEB941FA473C500B5A175 /* JKWheelLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 423EEB931FA473C500B5A175 /* JKWheelLayout.m */; };
+		4254CCDA1FB19D4E00C8B4B6 /* WheelLayout.png in Resources */ = {isa = PBXBuildFile; fileRef = 4254CCD91FB19D4E00C8B4B6 /* WheelLayout.png */; };
 		42B9EA8D1F02002A003E220C /* JKStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B9EA8C1F02002A003E220C /* JKStackView.m */; };
 		42B9EA931F025333003E220C /* JKStackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B9EA921F025333003E220C /* JKStackCell.m */; };
+		42BEAAC81FA16C320024D647 /* JKCarouselLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BEAAC71FA16C320024D647 /* JKCarouselLayout.m */; };
 		42C7B5131F009D0E00FDBBA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C7B5121F009D0E00FDBBA4 /* main.m */; };
 		42C7B5161F009D0E00FDBBA4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C7B5151F009D0E00FDBBA4 /* AppDelegate.m */; };
 		42C7B5191F009D0E00FDBBA4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C7B5181F009D0E00FDBBA4 /* ViewController.m */; };
@@ -52,10 +55,15 @@
 		420409B11F05F2F500B76C6F /* JKCoverFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKCoverFlowLayout.m; sourceTree = "<group>"; };
 		420409B31F05F69400B76C6F /* JKCoverFlowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKCoverFlowCell.h; sourceTree = "<group>"; };
 		420409B41F05F69400B76C6F /* JKCoverFlowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKCoverFlowCell.m; sourceTree = "<group>"; };
+		423EEB921FA473C500B5A175 /* JKWheelLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKWheelLayout.h; sourceTree = "<group>"; };
+		423EEB931FA473C500B5A175 /* JKWheelLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKWheelLayout.m; sourceTree = "<group>"; };
+		4254CCD91FB19D4E00C8B4B6 /* WheelLayout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WheelLayout.png; sourceTree = "<group>"; };
 		42B9EA8B1F02002A003E220C /* JKStackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKStackView.h; sourceTree = "<group>"; };
 		42B9EA8C1F02002A003E220C /* JKStackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKStackView.m; sourceTree = "<group>"; };
 		42B9EA911F025333003E220C /* JKStackCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKStackCell.h; sourceTree = "<group>"; };
 		42B9EA921F025333003E220C /* JKStackCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKStackCell.m; sourceTree = "<group>"; };
+		42BEAAC61FA16C320024D647 /* JKCarouselLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKCarouselLayout.h; sourceTree = "<group>"; };
+		42BEAAC71FA16C320024D647 /* JKCarouselLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKCarouselLayout.m; sourceTree = "<group>"; };
 		42C7B50E1F009D0E00FDBBA4 /* CollectionViewCustomerLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewCustomerLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C7B5121F009D0E00FDBBA4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		42C7B5141F009D0E00FDBBA4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -116,15 +124,34 @@
 			children = (
 				420409B01F05F2F500B76C6F /* JKCoverFlowLayout.h */,
 				420409B11F05F2F500B76C6F /* JKCoverFlowLayout.m */,
-				420409B31F05F69400B76C6F /* JKCoverFlowCell.h */,
-				420409B41F05F69400B76C6F /* JKCoverFlowCell.m */,
 			);
 			path = CoverFlowLayout;
+			sourceTree = "<group>";
+		};
+		423EEB911FA473A400B5A175 /* WheelLayout */ = {
+			isa = PBXGroup;
+			children = (
+				4254CCD91FB19D4E00C8B4B6 /* WheelLayout.png */,
+				423EEB921FA473C500B5A175 /* JKWheelLayout.h */,
+				423EEB931FA473C500B5A175 /* JKWheelLayout.m */,
+			);
+			path = WheelLayout;
+			sourceTree = "<group>";
+		};
+		42BEAAC51FA16C180024D647 /* CarouselLayout */ = {
+			isa = PBXGroup;
+			children = (
+				42BEAAC61FA16C320024D647 /* JKCarouselLayout.h */,
+				42BEAAC71FA16C320024D647 /* JKCarouselLayout.m */,
+			);
+			path = CarouselLayout;
 			sourceTree = "<group>";
 		};
 		42C7B5051F009D0E00FDBBA4 = {
 			isa = PBXGroup;
 			children = (
+				423EEB911FA473A400B5A175 /* WheelLayout */,
+				42BEAAC51FA16C180024D647 /* CarouselLayout */,
 				42EC1CAA1FA0746B008B0325 /* CardLayout */,
 				42C7B5481F00AFCA00FDBBA4 /* images */,
 				42EFA11F1F09F45C00DC161A /* MasonryLayout */,
@@ -154,6 +181,8 @@
 				42C7B5151F009D0E00FDBBA4 /* AppDelegate.m */,
 				42C7B5171F009D0E00FDBBA4 /* ViewController.h */,
 				42C7B5181F009D0E00FDBBA4 /* ViewController.m */,
+				420409B31F05F69400B76C6F /* JKCoverFlowCell.h */,
+				420409B41F05F69400B76C6F /* JKCoverFlowCell.m */,
 				42C7B51A1F009D0E00FDBBA4 /* Main.storyboard */,
 				42C7B51D1F009D0E00FDBBA4 /* Assets.xcassets */,
 				42C7B51F1F009D0E00FDBBA4 /* LaunchScreen.storyboard */,
@@ -301,6 +330,7 @@
 				TargetAttributes = {
 					42C7B50D1F009D0E00FDBBA4 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = Y9TW8FTXP2;
 						ProvisioningStyle = Automatic;
 					};
 					42C7B5261F009D0E00FDBBA4 = {
@@ -343,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42C7B5211F009D0E00FDBBA4 /* LaunchScreen.storyboard in Resources */,
+				4254CCDA1FB19D4E00C8B4B6 /* WheelLayout.png in Resources */,
 				42C7B5531F00AFCA00FDBBA4 /* 005.jpeg in Resources */,
 				42C7B5501F00AFCA00FDBBA4 /* 002.jpeg in Resources */,
 				42C7B5521F00AFCA00FDBBA4 /* 004.jpeg in Resources */,
@@ -380,6 +411,8 @@
 				42C7B5161F009D0E00FDBBA4 /* AppDelegate.m in Sources */,
 				42B9EA8D1F02002A003E220C /* JKStackView.m in Sources */,
 				42C7B5131F009D0E00FDBBA4 /* main.m in Sources */,
+				42BEAAC81FA16C320024D647 /* JKCarouselLayout.m in Sources */,
+				423EEB941FA473C500B5A175 /* JKWheelLayout.m in Sources */,
 				420409B21F05F2F500B76C6F /* JKCoverFlowLayout.m in Sources */,
 				42C7B5471F00A09400FDBBA4 /* JKStackLayout.m in Sources */,
 				42B9EA931F025333003E220C /* JKStackCell.m in Sources */,
@@ -535,7 +568,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = Y9TW8FTXP2;
 				INFOPLIST_FILE = CollectionViewCustomerLayout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.buakaw.www.CollectionViewCustomerLayout;
@@ -547,7 +580,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = Y9TW8FTXP2;
 				INFOPLIST_FILE = CollectionViewCustomerLayout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.buakaw.www.CollectionViewCustomerLayout;

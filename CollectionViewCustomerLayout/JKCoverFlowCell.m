@@ -10,4 +10,8 @@
 
 @implementation JKCoverFlowCell
 
+- (void)setNumber:(int)number {
+    self.lb.text = [NSString stringWithFormat:@"%d",number];
+}
+
 @end

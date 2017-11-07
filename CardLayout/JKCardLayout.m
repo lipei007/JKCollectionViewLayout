@@ -32,6 +32,9 @@
 }
 
 - (void)prepareLayout {
+    
+    [super prepareLayout];
+    
     CGFloat w = self.collectionView.bounds.size.width;
     CGFloat h = self.collectionView.bounds.size.height;
     
@@ -50,13 +53,13 @@
 }
 
 - (CGFloat)interval {
-    return [self margin] * 0.5;
+    return [self margin] * 0.1;
 }
 
 - (CGSize)collectionViewContentSize {
     CGFloat margin = [self margin];
     CGFloat interval = [self interval];
-    return CGSizeMake((interval + _itemWidth) * [self itemNumber] + interval + margin, 0);
+    return CGSizeMake((interval + _itemWidth) * ([self itemNumber] - 1) + _itemWidth + margin * 2, 0);
 }
 
 - (NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect {
