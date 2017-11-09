@@ -71,7 +71,12 @@
 }
 
 - (CGFloat)circularCenterY {
-    return self.height * 0.5 + self.radius;
+    /**
+     * 0 <= k <= 1： k越大，距离底部越近
+     * k > 1: k越大距离底部越远
+     */
+    float k = 0.9;
+    return self.height * k + self.radius;
 }
 
 - (NSMutableArray<UICollectionViewLayoutAttributes *> *)attrArray {
@@ -100,8 +105,8 @@
         UICollectionViewLayoutAttributes *attrs = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
         attrs.center = CGPointMake(x, y);
         attrs.size = self.itemSize;
-        attrs.transform = CGAffineTransformMakeRotation(theta);
-        attrs.zIndex = i;
+        attrs.transform = CGAffineTransformMakeRotation(theta); // 不旋转就和摩天轮类似
+        attrs.zIndex = 1-ABS(sin(theta));
         [self.attrArray addObject:attrs];
         theta += self.anglePerItem;
     }

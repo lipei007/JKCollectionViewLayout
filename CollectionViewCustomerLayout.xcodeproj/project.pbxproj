@@ -11,6 +11,12 @@
 		420409B51F05F69400B76C6F /* JKCoverFlowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 420409B41F05F69400B76C6F /* JKCoverFlowCell.m */; };
 		423EEB941FA473C500B5A175 /* JKWheelLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 423EEB931FA473C500B5A175 /* JKWheelLayout.m */; };
 		4254CCDA1FB19D4E00C8B4B6 /* WheelLayout.png in Resources */ = {isa = PBXBuildFile; fileRef = 4254CCD91FB19D4E00C8B4B6 /* WheelLayout.png */; };
+		427D23A61FB2B44700628EED /* MasonryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 427D23A51FB2B44700628EED /* MasonryVC.m */; };
+		427D23A91FB2B46C00628EED /* CoverflowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 427D23A81FB2B46C00628EED /* CoverflowVC.m */; };
+		427D23AC1FB2B47C00628EED /* CardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 427D23AB1FB2B47C00628EED /* CardVC.m */; };
+		427D23AF1FB2B48600628EED /* WheelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 427D23AE1FB2B48600628EED /* WheelVC.m */; };
+		427D23B21FB2B4A000628EED /* StackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 427D23B11FB2B4A000628EED /* StackVC.m */; };
+		427D23B51FB2CC7900628EED /* CarouselVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 427D23B41FB2CC7900628EED /* CarouselVC.m */; };
 		42B9EA8D1F02002A003E220C /* JKStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B9EA8C1F02002A003E220C /* JKStackView.m */; };
 		42B9EA931F025333003E220C /* JKStackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B9EA921F025333003E220C /* JKStackCell.m */; };
 		42BEAAC81FA16C320024D647 /* JKCarouselLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BEAAC71FA16C320024D647 /* JKCarouselLayout.m */; };
@@ -58,6 +64,18 @@
 		423EEB921FA473C500B5A175 /* JKWheelLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKWheelLayout.h; sourceTree = "<group>"; };
 		423EEB931FA473C500B5A175 /* JKWheelLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKWheelLayout.m; sourceTree = "<group>"; };
 		4254CCD91FB19D4E00C8B4B6 /* WheelLayout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WheelLayout.png; sourceTree = "<group>"; };
+		427D23A41FB2B44700628EED /* MasonryVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryVC.h; sourceTree = "<group>"; };
+		427D23A51FB2B44700628EED /* MasonryVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryVC.m; sourceTree = "<group>"; };
+		427D23A71FB2B46C00628EED /* CoverflowVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoverflowVC.h; sourceTree = "<group>"; };
+		427D23A81FB2B46C00628EED /* CoverflowVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoverflowVC.m; sourceTree = "<group>"; };
+		427D23AA1FB2B47C00628EED /* CardVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardVC.h; sourceTree = "<group>"; };
+		427D23AB1FB2B47C00628EED /* CardVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardVC.m; sourceTree = "<group>"; };
+		427D23AD1FB2B48600628EED /* WheelVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WheelVC.h; sourceTree = "<group>"; };
+		427D23AE1FB2B48600628EED /* WheelVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WheelVC.m; sourceTree = "<group>"; };
+		427D23B01FB2B49F00628EED /* StackVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StackVC.h; sourceTree = "<group>"; };
+		427D23B11FB2B4A000628EED /* StackVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StackVC.m; sourceTree = "<group>"; };
+		427D23B31FB2CC7900628EED /* CarouselVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarouselVC.h; sourceTree = "<group>"; };
+		427D23B41FB2CC7900628EED /* CarouselVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarouselVC.m; sourceTree = "<group>"; };
 		42B9EA8B1F02002A003E220C /* JKStackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKStackView.h; sourceTree = "<group>"; };
 		42B9EA8C1F02002A003E220C /* JKStackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKStackView.m; sourceTree = "<group>"; };
 		42B9EA911F025333003E220C /* JKStackCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKStackCell.h; sourceTree = "<group>"; };
@@ -181,6 +199,18 @@
 				42C7B5151F009D0E00FDBBA4 /* AppDelegate.m */,
 				42C7B5171F009D0E00FDBBA4 /* ViewController.h */,
 				42C7B5181F009D0E00FDBBA4 /* ViewController.m */,
+				427D23A41FB2B44700628EED /* MasonryVC.h */,
+				427D23A51FB2B44700628EED /* MasonryVC.m */,
+				427D23A71FB2B46C00628EED /* CoverflowVC.h */,
+				427D23A81FB2B46C00628EED /* CoverflowVC.m */,
+				427D23AA1FB2B47C00628EED /* CardVC.h */,
+				427D23AB1FB2B47C00628EED /* CardVC.m */,
+				427D23AD1FB2B48600628EED /* WheelVC.h */,
+				427D23AE1FB2B48600628EED /* WheelVC.m */,
+				427D23B01FB2B49F00628EED /* StackVC.h */,
+				427D23B11FB2B4A000628EED /* StackVC.m */,
+				427D23B31FB2CC7900628EED /* CarouselVC.h */,
+				427D23B41FB2CC7900628EED /* CarouselVC.m */,
 				420409B31F05F69400B76C6F /* JKCoverFlowCell.h */,
 				420409B41F05F69400B76C6F /* JKCoverFlowCell.m */,
 				42C7B51A1F009D0E00FDBBA4 /* Main.storyboard */,
@@ -408,9 +438,15 @@
 			files = (
 				420409B51F05F69400B76C6F /* JKCoverFlowCell.m in Sources */,
 				42C7B5191F009D0E00FDBBA4 /* ViewController.m in Sources */,
+				427D23AF1FB2B48600628EED /* WheelVC.m in Sources */,
 				42C7B5161F009D0E00FDBBA4 /* AppDelegate.m in Sources */,
+				427D23AC1FB2B47C00628EED /* CardVC.m in Sources */,
 				42B9EA8D1F02002A003E220C /* JKStackView.m in Sources */,
+				427D23B51FB2CC7900628EED /* CarouselVC.m in Sources */,
+				427D23A91FB2B46C00628EED /* CoverflowVC.m in Sources */,
+				427D23A61FB2B44700628EED /* MasonryVC.m in Sources */,
 				42C7B5131F009D0E00FDBBA4 /* main.m in Sources */,
+				427D23B21FB2B4A000628EED /* StackVC.m in Sources */,
 				42BEAAC81FA16C320024D647 /* JKCarouselLayout.m in Sources */,
 				423EEB941FA473C500B5A175 /* JKWheelLayout.m in Sources */,
 				420409B21F05F2F500B76C6F /* JKCoverFlowLayout.m in Sources */,

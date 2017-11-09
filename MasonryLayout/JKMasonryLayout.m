@@ -8,6 +8,13 @@
 
 #import "JKMasonryLayout.h"
 
+@interface JKMasonryLayout ()
+
+@property (nonatomic,strong) NSMutableArray *dataArray;
+
+@end
+
+
 @implementation JKMasonryLayout {
     CGFloat maxY;
     NSArray *attrs;
@@ -21,11 +28,57 @@
      */
     [super prepareLayout];
     
+//    maxY = 0;
+//    NSUInteger numberOfItem = [self.collectionView.dataSource collectionView:self.collectionView numberOfItemsInSection:0];
+//    NSMutableArray *attrsArr = [NSMutableArray arrayWithCapacity:numberOfItem];
+//
+//    CGFloat colY[self.numberOfColumns]; // 记录每列的高度
+//
+//    for (int i = 0; i < self.numberOfColumns; i++) {
+//        colY[i] = 0;
+//    }
+//
+//    for (int i = 0; i < numberOfItem; i++) {
+////        int row = i / self.numberOfColumns;
+//        int col = i % self.numberOfColumns;
+//        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
+//        CGFloat fullWidth = self.collectionView.bounds.size.width;
+//        CGFloat availableSpaceExcludingPadding = fullWidth - self.interItemSpacing * (self.numberOfColumns + 1);
+//        CGFloat itemWidth = availableSpaceExcludingPadding / self.numberOfColumns;
+//        CGFloat itemHeight = [self.delegate collectionView:self.collectionView layout:self heightForItemAtIndexPath:indexPath];
+//
+//        CGFloat x = self.interItemSpacing + (itemWidth + self.interItemSpacing) * col;
+//        CGFloat y = self.interItemSpacing + colY[col];
+//
+//        CGRect frame = CGRectMake(x, y, itemWidth, itemHeight);
+//        maxY = CGRectGetMaxY(frame) > maxY ? CGRectGetMaxY(frame) : maxY;
+//        colY[col] = CGRectGetMaxY(frame);
+//
+//        UICollectionViewLayoutAttributes *itemAttrs = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
+//        itemAttrs.frame = frame;
+//        [attrsArr addObject:itemAttrs];
+//    }
+//    attrs = attrsArr;
+//    maxY += self.interItemSpacing;
+
+    [self masonryLayout];
+    
+}
+
+- (NSMutableArray *)dataArray {
+    if (!_dataArray) {
+        _dataArray = [NSMutableArray array];
+    }
+    return _dataArray;
+}
+
+- (void)masonryLayout {
+    
     maxY = 0;
     NSUInteger numberOfItem = [self.collectionView.dataSource collectionView:self.collectionView numberOfItemsInSection:0];
     NSMutableArray *attrsArr = [NSMutableArray arrayWithCapacity:numberOfItem];
     
-    CGFloat colY[self.numberOfColumns];
+    CGFloat colY[self.numberOfColumns]; // 记录每列的高度
     
     for (int i = 0; i < self.numberOfColumns; i++) {
         colY[i] = 0;
@@ -33,19 +86,29 @@
     
     for (int i = 0; i < numberOfItem; i++) {
 //        int row = i / self.numberOfColumns;
-        int col = i % self.numberOfColumns;
+//        int col = i % self.numberOfColumns;
         NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
         CGFloat fullWidth = self.collectionView.bounds.size.width;
         CGFloat availableSpaceExcludingPadding = fullWidth - self.interItemSpacing * (self.numberOfColumns + 1);
         CGFloat itemWidth = availableSpaceExcludingPadding / self.numberOfColumns;
         CGFloat itemHeight = [self.delegate collectionView:self.collectionView layout:self heightForItemAtIndexPath:indexPath];
         
-        CGFloat x = self.interItemSpacing + (itemWidth + self.interItemSpacing) * col;
-        CGFloat y = self.interItemSpacing + colY[col];
+        // Y最小,避免出现其中一列高度比其余列高出特别多
+        CGFloat minY = MAXFLOAT;
+        int minYCol = 0;
+        for (int k = 0; k < self.numberOfColumns; k++) {
+            if (minY > colY[k]) {
+                minY = colY[k];
+                minYCol = k;
+            }
+        }
+        
+        CGFloat x = self.interItemSpacing + (itemWidth + self.interItemSpacing) * minYCol;
+        CGFloat y = self.interItemSpacing + colY[minYCol];
         
         CGRect frame = CGRectMake(x, y, itemWidth, itemHeight);
         maxY = CGRectGetMaxY(frame) > maxY ? CGRectGetMaxY(frame) : maxY;
-        colY[col] = CGRectGetMaxY(frame);
+        colY[minYCol] = CGRectGetMaxY(frame);
         
         UICollectionViewLayoutAttributes *itemAttrs = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
         itemAttrs.frame = frame;
@@ -53,7 +116,6 @@
     }
     attrs = attrsArr;
     maxY += self.interItemSpacing;
-    
 }
 
 - (CGSize)collectionViewContentSize {

@@ -65,7 +65,7 @@
     self.data = [self loadData];
     JKWheelLayout *layout = [[JKWheelLayout alloc] init];
     layout.itemSize = CGSizeMake(200, 256);
-    layout.radius = 700;
+    layout.radius = 500;
     self.cv.collectionViewLayout = layout;
     
     
@@ -99,16 +99,16 @@
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-//    return self.data.count;
+    return self.data.count;
     return 20;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     JKCoverFlowCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"JKCoverFlowCell" forIndexPath:indexPath];
     
-//    UIImage *img = [self.data objectAtIndex:indexPath.row];
-//    cell.iv.image = img;
-    cell.backgroundColor = [UIColor blueColor];
+    UIImage *img = [self.data objectAtIndex:indexPath.row];
+    cell.iv.image = img;
+//    cell.backgroundColor = [UIColor blueColor];
     [cell setNumber:(int)indexPath.row];
 
 //    cell.backgroundColor = [UIColor brownColor];
